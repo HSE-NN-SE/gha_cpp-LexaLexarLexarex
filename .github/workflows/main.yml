@@ -17,9 +17,6 @@ jobs:
       - name: ls
         run: ls
         
-      - name: bot
-        run: curl https://api.telegram.org/bot<1629447156:AAHtPQWzka0XpErG3VVzlt2FrRkmI3qbwpI>/getUpdates
-
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
