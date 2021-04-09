@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: download artifact
         uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
       - name: send default message
         uses: appleboy/telegram-action@master
         with:
