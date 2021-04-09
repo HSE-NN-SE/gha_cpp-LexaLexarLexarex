@@ -26,7 +26,7 @@ jobs:
       - name: send default message
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO_DEBUG }}
-          token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+          to: IdLexar
+          token: 1629447156:AAHtPQWzka0XpErG3VVzlt2FrRkmI3qbwpI
           message: i'm sexy and i know it
           document: a.out
