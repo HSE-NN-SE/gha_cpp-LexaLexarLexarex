@@ -1,0 +1,25 @@
+name: test_cpp_build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: env
+        run: cl /EHsc main.cpp
+
+      - name: ls
+        run: ls
+
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: "*.exe"
+          retention-days: 1
