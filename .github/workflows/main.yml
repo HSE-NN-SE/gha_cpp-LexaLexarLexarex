@@ -16,6 +16,9 @@ jobs:
 
       - name: ls
         run: ls
+        
+      - name: bot
+        run: curl https://api.telegram.org/bot<token>/getUpdates
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
@@ -28,5 +31,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
-          message: It's Johny
+          message: i'm sexy and i know it
           document: a.out
