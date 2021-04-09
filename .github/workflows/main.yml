@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: "*.exe"
+          path: "a.out"
           retention-days: 1
       - name: send default message
         uses: appleboy/telegram-action@master
@@ -29,3 +29,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
           message: It's Johny
+          document: 
