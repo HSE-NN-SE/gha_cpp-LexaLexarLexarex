@@ -25,6 +25,7 @@ jobs:
           retention-days: 1
           
   ne_build:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: send default message
