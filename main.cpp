@@ -215,4 +215,5 @@ int main() {
 		cout << left << endl << right << endl;
 		cout << left * right;
 	}
+	cin>>znak;
 }
