@@ -7,12 +7,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ilammy/msvc-dev-cmd@v1
       - name: env
-        run: g++ main.cpp
+        run: cl /EHsc main.cpp
 
       - name: ls
         run: ls
@@ -21,12 +21,16 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: "a.out"
+          path: "main.exe"
           retention-days: 1
+          
+  ne_build:
+    runs-on: ubuntu-latest
+    steps:
       - name: send default message
         uses: appleboy/telegram-action@master
         with:
           to: 774506700
           token: 1629447156:AAHtPQWzka0XpErG3VVzlt2FrRkmI3qbwpI
           message: Slava the best
-          document: a.out
+          document: main.exe
